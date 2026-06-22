@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semantic Layout</title>
+    <style>
+        /* General Setup */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            min-height: 95vh;
+            gap: 10px;
+        }
+
+        /* Border and spacing for all structural elements */
+        header, aside, main, footer {
+            border: 2px solid #000000;
+            padding: 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        /* Header and Footer take full width */
+        header {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: auto;
+            font-size: 14px;
+        }
+
+        /* Creating the Middle Section (Sidebar + Main Content) without using a div */
+        section {
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            border: none; /* No border for the wrapper section itself */
+        }
+
+        aside {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        main {
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        Header Section
+    </header>
+
+    <!-- Middle Section holding Sidebar and Main Content -->
+    <section>
+        <!-- Sidebar -->
+        <aside>
+            Sidebar Area
+        </aside>
+
+        <!-- Main Content Area -->
+        <main>
+            Main Content Area
+        </main>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        Footer Section
+    </footer>
+
+</body>
+</html>
