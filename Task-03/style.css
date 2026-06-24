@@ -1,0 +1,335 @@
+/* ==========================================================================
+   1. MASTER RESET & ROOT GLOBAL STYLES (بنیادی سیٹنگز)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #444;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. FLEXBOX NAVIGATION HEADER (مینو بار کا ڈیزائن)
+   ========================================================================== */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #009999;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #009999;
+}
+
+/* ==========================================================================
+   3. HERO BANNER & GENERAL TEXT (ہیرو سیکشن اور ہیڈنگز)
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1200') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.video-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200') no-repeat center center/cover;
+}
+
+.hero-content h2 {
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    color: #eee;
+    font-size: 16px;
+}
+
+.content-section {
+    padding: 50px 0;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    color: #009999;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.section-header p {
+    color: #888;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   4. AUTOMATED MEDIA RENDER WORKSPACE (فوٹوز اور ویڈیوز کا لائیو فریم)
+   ========================================================================== */
+.media-render-container {
+    width: 100%;
+    height: 85vh;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    background: #fff;
+    border: 1px solid #e2e8f0;
+}
+
+.media-render-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ==========================================================================
+   5. GLOBAL FOOTER (فوٹر ڈیزائن)
+   ========================================================================== */
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ==========================================================================
+   6. GLOBAL MOBILE RESPONSIVE MEDIA QUERIES (موبائل سیٹنگز)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .media-render-container {
+        height: 70vh;
+    }
+}
+
+
+/* ==========================================================================
+   7. SEPARATE ABOUT US PAGE STYLES (اباؤٹ پیج کی الگ سی ایس ایس)
+   ========================================================================== */
+.about-flex-box {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.about-image-side {
+    flex: 1;
+}
+
+.about-image-side img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.about-text-side {
+    flex: 1;
+}
+
+.about-text-side h2 {
+    color: #009999;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-text-side p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* اباؤٹ پیج کے لیے موبائل ریسپانسیو رول */
+@media (max-width: 768px) {
+    .about-flex-box {
+        flex-direction: column; /* موبائل پر تصویر اوپر اور ٹیکس نیچے آ جائے گا */
+        padding: 25px;
+        gap: 30px;
+    }
+}
+.about-image-side img {
+    width: 100%;
+    max-width: 380px; /* تصویر کو اسکرین پر زیادہ بڑا ہونے سے روکے گا */
+    height: auto;
+    border-radius: 12px; /* کونے خوبصورت گول ہو جائیں گے */
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* ہلکا سا شیڈو */
+    border: 3px solid #009999; /* تھیم کے مطابق بارڈر */
+}
+
+/* نام کے نیچے والی سب ہیڈنگ کا ڈیزائن */
+.about-text-side h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.dev-tagline {
+    color: #009999;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   8. SEPARATE CONTACT PAGE STYLES (رابطہ پیج کی الگ سی ایس ایس)
+   ========================================================================== */
+.contact-wrapper-card {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.contact-wrapper-card h2 {
+    color: #009999;
+    font-size: 28px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.form-subtitle {
+    color: #888;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.custom-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.custom-contact-form input, 
+.custom-contact-form textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #dcdfe6;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ان پٹ فیلڈز پر کلک (Focus) کرنے کا اسموتھ ایفیکٹ */
+.custom-contact-form input:focus, 
+.custom-contact-form textarea:focus {
+    border-color: #009999;
+    box-shadow: 0 0 8px rgba(0, 153, 153, 0.15);
+}
+
+.form-submit-btn {
+    background-color: #009999;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.form-submit-btn:hover {
+    background-color: #007777;
+}
+
+/* کنٹیکٹ پیج کے لیے موبائل ریسپانسیو رول */
+@media (max-width: 480px) {
+    .contact-wrapper-card {
+        padding: 25px 20px;
+    }
+    
+    .contact-wrapper-card h2 {
+        font-size: 24px;
+    }
+}
